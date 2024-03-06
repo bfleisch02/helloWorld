@@ -1,5 +1,9 @@
 /* Change color of paragraph to be grey and half the size than original */
-p#paragraph1 {
+p#paragraph10 {
+    color: grey;
+    font-size: 0.75em;
+}
+p#paragraph11 {
     color: grey;
     font-size: 0.75em;
 }
@@ -19,7 +23,11 @@ h2#header2 {
     text-decoration: underline;
 }
 /* Change color of paragraph to be black background with white letters */
-p#paragraph4 {
+p#paragraph40 {
+    background-color: black;
+    color: whitesmoke;
+}
+p#paragraph41 {
     background-color: black;
     color: whitesmoke;
 }
