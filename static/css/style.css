@@ -1,0 +1,45 @@
+/* Change color of paragraph to be grey and half the size than original */
+p#paragraph1 {
+    color: grey;
+    font-size: 0.75em;
+}
+/* Change color of paragraph to be golden and twice the size than original */
+p#paragraph2 {
+    color: darkgoldenrod;
+    font-size: 2em;
+}
+/* Change color of paragraph to be dark red and make the size slightly bigger than  the original */
+p#paragraph3 {
+    color: darkred;
+    font-size: 1.25em;
+}
+/* Change color of header to be red and underline the header */
+h2#header2 {
+    color: red;
+    text-decoration: underline;
+}
+/* Change color of paragraph to be black background with white letters */
+p#paragraph4 {
+    background-color: black;
+    color: whitesmoke;
+}
+/* Add an overall table border with a new color */
+table {
+    border-style: dashed;
+    border-width: 2px;
+    border-color: gold;
+}
+/* Change color of paragraph to be grey and half the size than original */
+p#paragraph5 {
+    background-color: cadetblue;
+    font-size: 1.5em;
+}
+/* Give a background color to my ordered list */
+.items {
+    background-color: rosybrown;
+}
+
+.logo {
+    width: 400px;
+    height: 100px;
+}
