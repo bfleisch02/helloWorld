@@ -18,7 +18,7 @@ def about():
 def about_css():
     return render_template('about-css.html')
 
-@app.route('/favorite-course', methods=['GET','POST'])
+@app.route('/favorite-course')
 def favorite_course():
     print('You entered your favorite course as: ' + request.args.get('fav_course'))
 
@@ -26,10 +26,14 @@ def favorite_course():
 
 @app.route('/contact', methods=['GET','POST'])
 def contact():
-    print('First Name: ' + request.form.get('firstName'))
-    print('Last Name: ' + request.form.get('lastName'))
-    print('Email: ' + request.form.get('email'))
-    print('Phone: ' + request.form.get('phone'))
+    if request.method == 'POST':
+        print('First name: ' + request.form.get('firstName'))
+        print('Last name: ' + request.form.get('lastName'))
+        print('Email: ' + request.form.get('email'))
+        print('Phone Number: ' + request.form.get('phone'))
+
+    if request.form.get('agreementCheck'):
+        print('Agree to be contacted entered: ' + request.form.get('agreementCheck'))
 
     return render_template('contact.html')
 
