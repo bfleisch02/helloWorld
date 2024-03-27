@@ -20,22 +20,15 @@ def about_css():
 
 @app.route('/favorite-course')
 def favorite_course():
-    print('You entered your favorite course as: ' + request.args.get('fav_course'))
-
     return render_template('favorite-course.html')
 
 @app.route('/contact', methods=['GET','POST'])
 def contact():
     if request.method == 'POST':
-        print('First name: ' + request.form.get('firstName'))
-        print('Last name: ' + request.form.get('lastName'))
-        print('Email: ' + request.form.get('email'))
-        print('Phone Number: ' + request.form.get('phone'))
+        return render_template('contact.html', form_submitted=True)
 
-    if request.form.get('agreementCheck'):
-        print('Agree to be contacted entered: ' + request.form.get('agreementCheck'))
-
-    return render_template('contact.html')
+    else:
+        return render_template('contact.html')
 
 @app.route('/base')
 def base():
