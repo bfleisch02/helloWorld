@@ -219,6 +219,7 @@ def page_not_found(e):
     flash(f'Sorry! You are trying to access a page that does not exist. Please contact support if this problem persists.', 'error')
     return render_template('404.html'), 404
 
+#training route taking user to training page and showing message
 @app.route('/training')
 @login_required
 @role_required(['ADMIN', 'MANAGER'])
