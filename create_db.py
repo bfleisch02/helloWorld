@@ -1,5 +1,6 @@
 from app import app, db
 from models import Student, Major
+from werkzeug.security import generate_password_hash
 import datetime as dt
 
 with app.app_context():
@@ -21,6 +22,8 @@ with app.app_context():
             'birth_date': dt.datetime(2007, 6, 1), 'is_honors':1},
         {'student_id': '2', 'first_name': 'Leo', 'last_name': 'Van Munching', 'email':'lvanmuncg456@umd.edu', 'major_id':6,
          'birth_date': dt.datetime(2008, 3, 24), 'is_honors': 0},
+        {'student_id': '3', 'first_name': 'Ben', 'last_name': 'Fleischer', 'email':'bfleisch@umd.edu', 'major_id':3,
+         'birth_date': dt.datetime(2002, 1, 13), 'is_honors': 0}
     ]
 
     for each_student in students:
