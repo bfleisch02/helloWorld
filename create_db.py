@@ -15,7 +15,7 @@ with app.app_context():
         db.session.add(a_major)
         db.session.commit()
 
-    # Initial loading of users
+    # Initial loading of users, including personal add
     users = [
         {'username': 'student', 'email': 'student@umd.edu', 'first_name':'Imma', 'last_name':'Student',
             'password': generate_password_hash('studentpw', method='pbkdf2:sha256'), 'role':'STUDENT'},
@@ -24,7 +24,7 @@ with app.app_context():
         {'username': 'admin', 'email': 'admin@umd.edu', 'first_name':'Crystal', 'last_name':'Ball',
             'password': generate_password_hash('adminpw', method='pbkdf2:sha256'), 'role':'ADMIN'},
         {'username': 'bfleisch', 'email': 'bfleisch@umd.edu', 'first_name': 'Ben', 'last_name': 'Fleischer',
-            'password': generate_password_hash('bfUMD02', method='pbkdf2:sha256'), 'role':'STUDENT'}
+         'password': generate_password_hash('bfUMD02', method='pbkdf2:sha256'), 'role': 'STUDENT'}
     ]
 
     for each_user in users:
